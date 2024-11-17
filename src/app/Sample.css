@@ -1,0 +1,118 @@
+.Example {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.Example__container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.Example__container__load {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.rotate-all,
+.remove-pdf {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.Example__container__document {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.page-item {
+    padding: 12px;
+    margin: 10px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-item:hover {
+    background-color: rgb(243, 241, 241);
+}
+
+.page-rotate {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #ff5722;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.rotate-0 {
+    transform: rotate(0deg);
+}
+
+.page-index {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    font-style: oblique
+}
+
+.react-pdf__Document {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.operate-btn-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto 10px auto;
+}
+
+.download-btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.rotate-all-color {
+    background-color: #ff5722;
+}
+
+.remove-pdf-color {
+    background-color: rgb(31 41 55/ 1);
+}
+
+.scale-icon {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.operate-btn-cursor {
+    cursor: pointer;
+}
