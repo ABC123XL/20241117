@@ -1,11 +1,37 @@
 "use client";
 
-import Sample from "./Sample";
 import styles from "./page.module.css";
 import "./globals.css";
 import Image from "next/image";
 import uploadIcon from "./assets/upload.svg";
-import { useRef, useState } from "react";
+import { useRef, useState, lazy, useEffect } from "react";
+// import Sample from "./Sample";
+const Sample = lazy(() => import("./Sample"));
+
+if (typeof Promise.withResolvers !== "function") {
+  // if (window) {
+  //   window.Promise.withResolvers = function <T>() {
+  //     let resolve!: (value: T | PromiseLike<T>) => void;
+  //     let reject!: (reason?: any) => void;
+  //     const promise = new Promise<T>((res, rej) => {
+  //       resolve = res;
+  //       reject = rej;
+  //     });
+  //     return { promise, resolve, reject };
+  //   };
+  // } else
+  if (global) {
+    global.Promise.withResolvers = function <T>() {
+      let resolve!: (value: T | PromiseLike<T>) => void;
+      let reject!: (reason?: any) => void;
+      const promise = new Promise<T>((res, rej) => {
+        resolve = res;
+        reject = rej;
+      });
+      return { promise, resolve, reject };
+    };
+  }
+}
 
 export default function Home() {
   const [file, setFile] = useState<File | null>();
